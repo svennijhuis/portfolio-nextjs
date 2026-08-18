@@ -1,7 +1,7 @@
 "use client";
 
 import clsx from "clsx";
-import { motion, useInView } from "framer-motion";
+import { Variants, motion, useInView } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { useRef } from "react";
 
@@ -40,7 +40,7 @@ const AnimatedTextWord = ({
     setContainer(container);
   }, [isInView]);
 
-  const child = {
+  const child: Variants = {
     visible: {
       opacity: 1,
       x: 0,

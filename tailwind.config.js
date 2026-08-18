@@ -425,8 +425,15 @@ module.exports = {
     },
   },
   plugins: [
-    require("tailwindcss-animate"),
+    // Tailwind v4 removed the `@screen` directive, so the breakpoints below are
+    // written as plain media queries. The values match Tailwind's defaults.
     function ({ addComponents }) {
+      const wide = {
+        width: "100%",
+        maxWidth: "100%",
+        paddingLeft: "50px",
+        paddingRight: "50px",
+      };
       addComponents({
         ".container": {
           width: "100%",
@@ -435,36 +442,11 @@ module.exports = {
           marginRight: "auto",
           paddingLeft: "20px",
           paddingRight: "20px",
-          "@screen sm": {
-            width: "100%",
-            maxWidth: "100%",
-            paddingLeft: "50px",
-            paddingRight: "50px",
-          },
-          "@screen md": {
-            width: "100%",
-            maxWidth: "100%",
-            paddingLeft: "50px",
-            paddingRight: "50px",
-          },
-          "@screen lg": {
-            width: "100%",
-            maxWidth: "100%",
-            paddingLeft: "50px",
-            paddingRight: "50px",
-          },
-          "@screen xl": {
-            width: "100%",
-            maxWidth: "100%",
-            paddingLeft: "50px",
-            paddingRight: "50px",
-          },
-          "@screen 2xl": {
-            width: "100%",
-            maxWidth: "1600px",
-            paddingLeft: "50px",
-            paddingRight: "50px",
-          },
+          "@media (min-width: 640px)": wide,
+          "@media (min-width: 768px)": wide,
+          "@media (min-width: 1024px)": wide,
+          "@media (min-width: 1280px)": wide,
+          "@media (min-width: 1536px)": { ...wide, maxWidth: "1600px" },
         },
       });
     },

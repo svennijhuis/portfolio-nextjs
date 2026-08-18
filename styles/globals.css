@@ -1,6 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* Keep the existing JavaScript theme (custom px scales, colors, container). */
+@config "../tailwind.config.js";
  
 @layer base {
   :root {
