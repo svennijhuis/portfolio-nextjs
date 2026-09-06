@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useTransform, useScroll } from "framer-motion";
+import { motion, useTransform, useScroll } from "motion/react";
 import { useRef } from "react";
 
 interface RotateOnScrollProps {

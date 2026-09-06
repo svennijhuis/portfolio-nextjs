@@ -3,7 +3,7 @@
 import InViewFadeIn from "@/components/animation/inview-fade-in";
 import LinkStyling from "@/components/buttons/link-styling";
 import Paragraph from "@/components/text/paragraph";
-import { Variants, motion, useInView } from "framer-motion";
+import { Variants, motion, useInView } from "motion/react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 

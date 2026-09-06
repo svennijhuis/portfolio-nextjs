@@ -1,11 +1,12 @@
 import "../styles/globals.css";
 import { openGraphImage } from "./shared-metadata";
 import { Analytics } from "@vercel/analytics/react";
+import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: {
     default: "Sven Nijhuis",
     template: "Sven Nijhuis | %s",
