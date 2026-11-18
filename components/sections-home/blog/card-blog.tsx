@@ -1,6 +1,5 @@
 import { formatDate, type PostMeta } from "@/lib/blog";
 import ArrowIcon from "@/public/icons/arrow-icon";
-import Image from "next/image";
 import Link from "next/link";
 
 interface CardBlogProps {
@@ -11,20 +10,8 @@ const CardBlog = ({ post }: CardBlogProps) => {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group col-span-1 flex flex-col gap-1.5 rounded-2xl border-[1px] border-black/20 bg-white p-[15px] transition-all duration-500 ease-in-out hover:-translate-y-[4px] hover:border-black/40 sm:flex-row md:p-2"
+      className="group col-span-1 flex flex-col rounded-2xl border-[1px] border-black/20 bg-white p-[15px] transition-all duration-500 ease-in-out hover:-translate-y-[4px] hover:border-black/40 md:p-2"
     >
-      {post.cover && (
-        <div className="relative aspect-[16/9] w-full shrink-0 self-start overflow-hidden rounded-xl sm:w-[160px] lg:w-[200px]">
-          <Image
-            src={post.cover}
-            alt={post.title}
-            fill
-            sizes="(min-width: 640px) 200px, 100vw"
-            className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
-          />
-        </div>
-      )}
-
       <div className="flex min-w-0 flex-1 flex-col">
         <div className="flex items-center justify-between gap-1">
           <span className="text-12 text-grayDark truncate font-light">
