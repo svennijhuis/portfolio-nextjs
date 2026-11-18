@@ -53,7 +53,7 @@ const Blog = () => {
       </div>
 
       {hasMore && (
-        <div className="container mt-3 flex justify-center md:mt-5">
+        <div className="container mt-3 flex justify-end md:mt-5">
           <LinkStyling href="/blog" color="black" icon="arrow" iconHover="eye">
             See more
           </LinkStyling>
