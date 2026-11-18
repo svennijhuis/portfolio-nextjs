@@ -7,6 +7,7 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://svennijhuis.io"),
   title: {
     default: "Sven Nijhuis",
     template: "Sven Nijhuis | %s",
