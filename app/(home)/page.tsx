@@ -1,4 +1,5 @@
 import AboutMe from "@/components/sections-home/about-me/about-me";
+import Blog from "@/components/sections-home/blog/blog";
 import Contact from "@/components/sections-home/contact/contact";
 import Experience from "@/components/sections-home/experience/experience";
 import ImageGallery from "@/components/sections-home/gallery/image-gallery";
@@ -19,6 +20,7 @@ export default async function Page() {
       <ImageGallery />
       <AboutMe />
       {/* <Work /> */}
+      <Blog />
       <Experience />
       <Contact />
     </>

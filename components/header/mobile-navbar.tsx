@@ -21,27 +21,31 @@ const MobileNavbar = () => {
       url: "/#work",
     },
     {
+      name: "Blog",
+      url: "/blog",
+    },
+    {
       name: "Experience",
-      url: "#experience",
+      url: "/#experience",
     },
     {
       name: "Contact",
-      url: "#contact",
+      url: "/#contact",
     },
   ];
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    // first prevent the default behavior
-    e.preventDefault();
-    // get the href and remove everything before the hash (#)
+    // Smooth-scroll only when the target section is on the current page;
+    // otherwise (e.g. /blog, or /#contact from a blog page) let Next navigate.
     const href = e.currentTarget.href;
-    const targetId = href.replace(/.*\#/, "");
-    // get the element by id and use scrollIntoView
-    const elem = document.getElementById(targetId);
-    elem?.scrollIntoView({
-      behavior: "smooth",
-    });
-    setIsOpen(!isOpen);
+    const elem = href.includes("#")
+      ? document.getElementById(href.replace(/.*\#/, ""))
+      : null;
+    if (elem) {
+      e.preventDefault();
+      elem.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsOpen(false);
   };
 
   return (
