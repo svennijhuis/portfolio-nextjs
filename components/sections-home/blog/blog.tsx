@@ -47,8 +47,8 @@ const Blog = () => {
       </div>
 
       <div className="container mt-3 grid grid-cols-1 gap-5 md:mt-6 md:grid-cols-2">
-        {visible.map(post => (
-          <CardBlog key={post.slug} post={post} />
+        {visible.map((post, index) => (
+          <CardBlog key={post.slug} post={post} number={posts.length - index} />
         ))}
       </div>
 
