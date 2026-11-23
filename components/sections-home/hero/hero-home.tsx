@@ -7,10 +7,10 @@ import Paragraph from "@/components/text/paragraph";
 
 const HeroHome = () => {
   return (
-    <ScaleOnScroll className="pb-10 pt-12 md:pt-[180px]">
+    <ScaleOnScroll className="pt-12 pb-10 md:pt-[180px]">
       <section className="container grid grid-cols-1 md:grid-cols-2">
         <article className="col-span-1 mb-2 md:col-span-2 md:mb-3">
-          <H1 className="max-w-[1050px] text-black">
+          <H1 className="max-w-[1050px] font-semibold text-black">
             <AnimatedTextWord
               text="Hi, I'M SVEN. I BUILD SOFTWARE."
               className="mr-[10px] md:mr-3"

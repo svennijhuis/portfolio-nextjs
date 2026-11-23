@@ -52,7 +52,7 @@ export default async function BlogPostPage({ params }: Props) {
           <TitleSmall className="mb-2">
             {formatDate(post.date)} · {post.readingTime} min read
           </TitleSmall>
-          <H1 className="text-33 sm:text-45 md:text-70 max-w-[1100px] leading-40 sm:leading-50 md:leading-75">
+          <H1 className="max-w-[1100px] text-[33px] leading-40 sm:text-[45px] sm:leading-50 md:text-[70px] md:leading-80">
             {post.title}
           </H1>
           {post.tags.length > 0 && (

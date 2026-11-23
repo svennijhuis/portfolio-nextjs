@@ -1,14 +1,28 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
 import LinkStyling from "../buttons/link-styling";
 import MobileNavbar from "./mobile-navbar";
-import Link from "next/link";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  // The logo always brings you home: close the menu, and when you are
+  // already on the home page, scroll back to the top.
+  const goHome = () => {
+    setIsOpen(false);
+    if (pathname === "/") window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <header className="fixed left-0 right-0 top-0 z-10 flex h-6 items-center bg-white md:h-8">
+    <header className="fixed top-0 right-0 left-0 z-10 flex h-6 items-center bg-white md:h-8">
       <div className="container grid grid-cols-2 gap-5">
         <div className="col-span-1">
-          <Link className="relative z-10 block" href="/">
-            <p className="text-18 font-medium uppercase text-black md:text-20">
+          <Link className="relative z-10 block" href="/" onClick={goHome}>
+            <p className="text-18 md:text-20 font-medium text-black uppercase">
               Sven <span className="text-grayDark">Nijhuis</span>
             </p>
           </Link>
@@ -23,7 +37,7 @@ const Header = () => {
           >
             Contact
           </LinkStyling>
-          <MobileNavbar />
+          <MobileNavbar isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
       </div>
     </header>
