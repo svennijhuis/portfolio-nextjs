@@ -8,7 +8,7 @@ const H3 = React.forwardRef<HTMLHeadingElement, H3Props>(
     return (
       <h3
         className={cn(
-     "text-normal text-33 leading-40 sm:text-35 md:text-45 md:leading-50",
+          "text-normal text-[clamp(22px,6.5vw,33px)] leading-[1.15] sm:text-35 sm:leading-40 md:text-45 md:leading-50",
           className
         )}
         ref={ref}

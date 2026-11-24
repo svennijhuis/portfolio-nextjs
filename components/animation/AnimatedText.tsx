@@ -42,8 +42,6 @@ interface AnimatedTextWordProps {
   darkWords?: boolean[];
   loadingHeight?: string;
   marginView: MarginView;
-  /** Keep every word on one line. Used for short headings that should not wrap. */
-  nowrap?: boolean;
 }
 
 const AnimatedTextWord = ({
@@ -52,7 +50,6 @@ const AnimatedTextWord = ({
   darkWords,
   loadingHeight,
   marginView,
-  nowrap = false,
 }: AnimatedTextWordProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: marginView });
@@ -70,7 +67,7 @@ const AnimatedTextWord = ({
     <motion.span
       ref={ref}
       style={{ overflow: "hidden", display: "flex" }}
-      className={nowrap ? "flex-nowrap" : "flex-wrap"}
+      className="w-full flex-wrap"
       variants={container}
       initial="hidden"
       animate="visible"

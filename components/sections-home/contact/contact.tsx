@@ -13,14 +13,13 @@ const Contact = () => {
           <TitleSmall className="mb-2">Contact</TitleSmall>
         </article>
         <article className="col-span-1">
-          <H3 className="max-w-none text-[clamp(26px,8vw,33px)] leading-[1.2] text-black sm:max-w-[370px] sm:text-35 sm:leading-40 md:max-w-[485px]">
+          <H3 className="max-w-[370px] text-black md:max-w-[485px]">
             <AnimatedTextWord
               text="Let's Connect!"
               className="mr-1 uppercase"
               darkWords={[false, true]}
               marginView="-30% 0% -25% 0%"
               loadingHeight="min-h-[40px] md:min-h-[50px]"
-              nowrap
             />
           </H3>
           <InViewFadeIn delay={0.8} time={0.8}>

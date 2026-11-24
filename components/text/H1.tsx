@@ -8,7 +8,7 @@ const H1 = React.forwardRef<HTMLHeadingElement, H1Props>(
     return (
       <h1
         className={cn(
-          "text-normal text-38 uppercase leading-40 text-black sm:text-55 sm:leading-55 md:text-[100px] md:leading-110",
+          "text-normal text-[clamp(26px,7.2vw,38px)] uppercase leading-[1.05] text-black sm:text-55 sm:leading-55 md:text-[100px] md:leading-110",
           className
         )}
         ref={ref}
