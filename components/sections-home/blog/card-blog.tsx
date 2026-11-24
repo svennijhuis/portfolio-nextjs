@@ -13,7 +13,7 @@ const CardBlog = ({ post, number }: CardBlogProps) => {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group col-span-1 flex flex-col rounded-2xl border-[1px] border-black/20 bg-white p-[15px] transition-all duration-500 ease-in-out hover:-translate-y-[4px] hover:border-black/40 sm:flex-row sm:gap-2 md:p-2"
+      className="group sticky top-10 col-span-1 flex flex-col rounded-2xl border-[1px] border-black/20 bg-white p-[15px] transition-all duration-500 ease-in-out hover:-translate-y-[4px] hover:border-black/40 sm:flex-row sm:gap-2 md:static md:p-2"
     >
       <div className="bg-softBlack relative mb-1.5 flex h-[65px] w-[65px] shrink-0 items-center justify-center rounded-lg transition-colors duration-500 group-hover:bg-black sm:mb-0 sm:h-[90px] sm:w-[90px]">
         <span className="text-24 text-orange sm:text-32 font-mono font-medium">
@@ -31,10 +31,10 @@ const CardBlog = ({ post, number }: CardBlogProps) => {
 
       <div className="flex min-w-0 flex-1 flex-col">
         <div className="flex items-center justify-between gap-1">
-          <span className="text-12 text-grayDark truncate font-light">
+          <span className="text-14 text-grayDark truncate font-light md:text-12">
             /{post.slug}
           </span>
-          <span className="text-12 text-grayDark font-light whitespace-nowrap">
+          <span className="text-14 text-grayDark font-light whitespace-nowrap md:text-12">
             {formatDate(post.date)} · {post.readingTime} min read
           </span>
         </div>
@@ -44,7 +44,7 @@ const CardBlog = ({ post, number }: CardBlogProps) => {
         </h4>
 
         {post.description && (
-          <p className="text-14 mt-[6px] line-clamp-2 leading-22 font-light text-black">
+          <p className="text-16 md:text-14 mt-[6px] line-clamp-2 leading-24 font-light text-black md:leading-22">
             {post.description}
           </p>
         )}
@@ -54,7 +54,7 @@ const CardBlog = ({ post, number }: CardBlogProps) => {
             {post.tags.map(tag => (
               <span
                 key={tag}
-                className="text-12 flex rounded-3xl border-[1px] border-black px-1 py-[2px] font-normal text-black"
+                className="text-14 md:text-12 flex rounded-3xl border-[1px] border-black px-1 py-[2px] font-normal text-black"
               >
                 #{tag}
               </span>

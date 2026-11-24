@@ -111,7 +111,7 @@ const Work = () => {
           >
             {item.tech.map((item, index) => (
               <span
-                className="flex rounded-3xl border-[1px] border-black px-1 py-[2px] text-12 font-normal text-black"
+                className="flex rounded-3xl border-[1px] border-black px-1 py-[2px] text-14 font-normal text-black md:text-12"
                 key={index}
               >
                 {item}

@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   ],
   authors: [
     { name: "Sven Nijhuis" },
-    { name: "Sven Nijhuis", url: "www.svennijhuis.io" },
+    { name: "Sven Nijhuis", url: "https://svennijhuis.io" },
   ],
 
   creator: "Sven Nijhuis",
@@ -48,11 +48,25 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     ...openGraphImage,
+    type: "website",
+    url: "/",
+    siteName: "Sven Nijhuis",
+    locale: "en",
     title: "Sven Nijhuis",
     description:
       "Backend developer in Hoorn. I work with C# and .NET on Azure, and with AI engineering.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sven Nijhuis",
+    description:
+      "Backend developer in Hoorn. I work with C# and .NET on Azure, and with AI engineering.",
+    images: openGraphImage.images,
   },
   category: "technology portfolio",
 };

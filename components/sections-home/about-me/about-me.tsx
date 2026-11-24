@@ -21,7 +21,7 @@ const AboutMe = () => {
             src={ImageProfile}
             width={150}
             height={150}
-            alt=""
+            alt="Sven Nijhuis"
           />
         </InViewFadeIn>
         <RotateOnScroll className="absolute bottom-[-100px] left-[-100px] -z-[2] h-[250px] w-[250px] opacity-20 md:h-[375px] md:w-[375px]">

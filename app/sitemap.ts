@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...posts.map(post => ({
       url: `${BASE_URL}/blog/${post.slug}`,
       lastModified: new Date(post.date),
+      ...(post.cover ? { images: [`${BASE_URL}${post.cover}`] } : {}),
     })),
   ];
 }
