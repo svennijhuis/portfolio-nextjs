@@ -70,7 +70,7 @@ export default async function BlogPostPage({ params }: Props) {
 
           <div className="mx-auto mt-4 max-w-[720px] md:mt-6">
             {post.cover && (
-              <div className="relative mb-4 aspect-[16/9] w-full overflow-hidden rounded-2xl">
+              <div className="relative mb-4 aspect-[5/2] w-full overflow-hidden rounded-2xl">
                 <Image
                   src={post.cover}
                   alt={post.title}
