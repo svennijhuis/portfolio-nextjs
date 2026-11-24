@@ -1,12 +1,11 @@
 import { openGraphImage } from "@/app/shared-metadata";
+import CardBlog from "@/components/sections-home/blog/card-blog";
 import Contact from "@/components/sections-home/contact/contact";
 import H1 from "@/components/text/H1";
 import Paragraph from "@/components/text/paragraph";
 import TitleSmall from "@/components/text/title-small";
-import { formatDate, getAllPosts } from "@/lib/blog";
-import ArrowIcon from "@/public/icons/arrow-icon";
+import { getAllPosts } from "@/lib/blog";
 import type { Metadata } from "next";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -39,40 +38,15 @@ export default function BlogPage() {
             development, tooling and the things I build.
           </Paragraph>
 
-          <ul className="mt-5 flex flex-col gap-1.5 md:mt-8">
-            {posts.map(post => (
-              <li key={post.slug}>
-                <Link
-                  href={`/blog/${post.slug}`}
-                  className="group bg-gray grid grid-cols-1 items-center gap-[6px] rounded-2xl border-[1px] border-black/20 p-[15px] transition-all duration-500 ease-in-out hover:border-black/40 md:grid-cols-[140px_1fr_auto] md:gap-3 md:p-2"
-                >
-                  <span className="text-13 text-grayDark md:text-14 font-light">
-                    {formatDate(post.date)}
-                  </span>
-                  <div>
-                    <h2 className="text-20 md:text-24 leading-26 font-medium text-black md:leading-30">
-                      {post.title}
-                    </h2>
-                    {post.description && (
-                      <p className="text-14 mt-[4px] leading-22 font-light text-black">
-                        {post.description}
-                      </p>
-                    )}
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <span className="text-13 text-grayDark font-light whitespace-nowrap">
-                      {post.readingTime} min read
-                    </span>
-                    <span className="group-hover:bg-orange flex h-[32px] w-[32px] shrink-0 items-center justify-center rounded-full bg-black p-[8px] transition-all duration-500 group-hover:-rotate-45">
-                      <span className="flex w-full invert [&_svg]:h-auto [&_svg]:w-full">
-                        <ArrowIcon />
-                      </span>
-                    </span>
-                  </div>
-                </Link>
-              </li>
+          <div className="mt-5 grid grid-cols-1 gap-5 md:mt-8 md:grid-cols-2">
+            {posts.map((post, index) => (
+              <CardBlog
+                key={post.slug}
+                post={post}
+                number={posts.length - index}
+              />
             ))}
-          </ul>
+          </div>
         </div>
       </section>
       <Contact />
