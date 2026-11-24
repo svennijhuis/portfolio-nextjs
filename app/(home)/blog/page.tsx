@@ -10,10 +10,21 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Blog",
   description: "Notes on web development, tooling and the things I build.",
+  alternates: {
+    canonical: "/blog",
+  },
   openGraph: {
     ...openGraphImage,
+    type: "website",
+    url: "/blog",
     title: "Blog | Sven Nijhuis",
     description: "Notes on web development, tooling and the things I build.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog | Sven Nijhuis",
+    description: "Notes on web development, tooling and the things I build.",
+    images: openGraphImage.images,
   },
 };
 
@@ -38,7 +49,7 @@ export default function BlogPage() {
             development, tooling and the things I build.
           </Paragraph>
 
-          <div className="mt-5 grid grid-cols-1 gap-5 md:mt-8 md:grid-cols-2">
+          <div className="mt-5 grid grid-cols-1 gap-2 md:mt-8 md:grid-cols-2 md:gap-5">
             {posts.map((post, index) => (
               <CardBlog
                 key={post.slug}

@@ -13,7 +13,7 @@ const Paragraph = React.forwardRef<HTMLHeadingElement, ParagraphProps>(
       <p
         className={cn(className, {
           // Size
-          "text-9 leading-19": size === "sm",
+          "text-16 leading-24 md:text-9 md:leading-19": size === "sm",
           "text-16 md:text-18": size === "md",
           "text-21": size === "lg",
           // Color

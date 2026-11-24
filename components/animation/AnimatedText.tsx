@@ -67,7 +67,7 @@ const AnimatedTextWord = ({
     <motion.span
       ref={ref}
       style={{ overflow: "hidden", display: "flex" }}
-      className="flex-wrap"
+      className="w-full flex-wrap"
       variants={container}
       initial="hidden"
       animate="visible"

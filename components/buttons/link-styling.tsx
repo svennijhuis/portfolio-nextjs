@@ -49,7 +49,7 @@ const LinkStyling = ({
       target={target}
       onClick={handleScroll}
       className={clsx(
-        "flex h-[32px] w-fit flex-row items-center justify-center gap-1 rounded-full py-[5px] pl-1 pr-[5px] text-13 font-light transition-all duration-500 ease-in-out hover:-rotate-3 hover:scale-105 md:text-14",
+        "flex h-[32px] w-fit flex-row items-center justify-center gap-1 rounded-full py-[5px] pl-1 pr-[5px] text-14 font-light transition-all duration-500 ease-in-out hover:-rotate-3 hover:scale-105",
         className,
         styles.linkStyling,
         {

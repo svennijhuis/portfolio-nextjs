@@ -1,5 +1,6 @@
 import LinkStyling from "@/components/buttons/link-styling";
 import Contact from "@/components/sections-home/contact/contact";
+import JsonLd from "@/components/seo/json-ld";
 import H1 from "@/components/text/H1";
 import TitleSmall from "@/components/text/title-small";
 import { formatDate, getAllPosts, getPost } from "@/lib/blog";
@@ -27,15 +28,29 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPost(slug);
   if (!post) return {};
 
+  const path = `/blog/${slug}`;
+  const image = post.cover ? [post.cover] : undefined;
+
   return {
     title: post.title,
     description: post.description,
+    alternates: {
+      canonical: path,
+    },
     openGraph: {
       title: post.title,
       description: post.description,
       type: "article",
+      url: path,
       publishedTime: post.date,
-      ...(post.cover && { images: [post.cover] }),
+      authors: ["Sven Nijhuis"],
+      ...(image && { images: image }),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+      ...(image && { images: image }),
     },
   };
 }
@@ -45,8 +60,26 @@ export default async function BlogPostPage({ params }: Props) {
   const post = getPost(slug);
   if (!post) notFound();
 
+  const postUrl = `https://svennijhuis.io/blog/${post.slug}`;
+  const postJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    author: {
+      "@type": "Person",
+      name: "Sven Nijhuis",
+      url: "https://svennijhuis.io",
+    },
+    image: post.cover ? `https://svennijhuis.io${post.cover}` : undefined,
+    mainEntityOfPage: postUrl,
+    url: postUrl,
+  };
+
   return (
     <>
+      <JsonLd data={postJsonLd} />
       <article className="pt-10 pb-8 md:pt-[160px] md:pb-12">
         <div className="container">
           <TitleSmall className="mb-2">
@@ -60,7 +93,7 @@ export default async function BlogPostPage({ params }: Props) {
               {post.tags.map(tag => (
                 <span
                   key={tag}
-                  className="text-12 flex rounded-3xl border-[1px] border-black px-1 py-[2px] font-normal text-black"
+                  className="text-14 md:text-12 flex rounded-3xl border-[1px] border-black px-1 py-[2px] font-normal text-black"
                 >
                   #{tag}
                 </span>

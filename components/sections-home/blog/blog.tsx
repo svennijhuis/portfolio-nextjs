@@ -46,7 +46,7 @@ const Blog = () => {
         </article>
       </div>
 
-      <div className="container mt-3 grid grid-cols-1 gap-5 md:mt-6 md:grid-cols-2">
+      <div className="container mt-3 grid grid-cols-1 gap-2 md:mt-6 md:grid-cols-2 md:gap-5">
         {visible.map((post, index) => (
           <CardBlog key={post.slug} post={post} number={index + 1} />
         ))}
