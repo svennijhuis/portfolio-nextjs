@@ -43,7 +43,7 @@ export default function BlogPage() {
               <CardBlog
                 key={post.slug}
                 post={post}
-                number={posts.length - index}
+                number={index + 1}
               />
             ))}
           </div>

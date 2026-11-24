@@ -5,7 +5,7 @@ import Link from "next/link";
 
 interface CardBlogProps {
   post: PostMeta;
-  /** Post number shown in the tile, oldest post is 01. */
+  /** Post number shown in the tile. The first card on the page is 01. */
   number: number;
 }
 
