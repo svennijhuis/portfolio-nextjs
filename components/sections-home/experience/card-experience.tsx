@@ -1,3 +1,4 @@
+import ButtonStyling from "@/components/buttons/button-styling";
 import Paragraph from "@/components/text/paragraph";
 import ArrowIcon from "@/public/icons/arrow-icon";
 import BookIcon from "@/public/icons/book-icon";
@@ -68,8 +69,8 @@ const CardExperience = React.forwardRef<HTMLDivElement, CardExperienceProps>(
         className={clsx(
           "sticky top-10 flex flex-col rounded-2xl border-[1px] border-black/20 bg-gray p-[15px] transition-all duration-500 ease-in-out md:top-[200px] md:p-2",
           isExpanded
-            ? "h-auto min-h-[200px] md:min-h-[225px]"
-            : "h-[200px] md:h-[225px]"
+            ? "h-auto min-h-[220px] md:min-h-[245px]"
+            : "h-[220px] md:h-[245px]"
         )}
       >
         <div className="flex gap-1 md:gap-2">
@@ -130,17 +131,16 @@ const CardExperience = React.forwardRef<HTMLDivElement, CardExperienceProps>(
         </div>
 
         {showReadMore && (
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className={clsx(
-              "mt-auto text-start text-12 font-medium transition-opacity duration-300",
-              showReadMore ? "opacity-100" : "pointer-events-none opacity-0"
-            )}
-          >
-            <span className="hover:text-gray-700 underline">
+          <div className="mt-auto shrink-0 pt-1">
+            <ButtonStyling
+              color="black"
+              icon="arrow"
+              iconHover="eye"
+              onClick={() => setIsExpanded(!isExpanded)}
+            >
               {isExpanded ? "Show Less" : "Read More"}
-            </span>
-          </button>
+            </ButtonStyling>
+          </div>
         )}
       </article>
     );

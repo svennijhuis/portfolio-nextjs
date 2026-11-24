@@ -28,9 +28,8 @@ const HeroHome = () => {
               color="black"
               fontWeight="medium"
             >
-              For me, it's all about continuous growth and improvement as a
-              software developer while exploring new technologies and
-              approaches.
+              I'm a backend developer based in Hoorn. I work with C# and
+              .NET on Azure, and with AI engineering.
             </Paragraph>
           </InViewFadeIn>
         </article>
@@ -42,10 +41,10 @@ const HeroHome = () => {
               color="black"
               fontWeight="light"
             >
-              I work daily with .NET, C#, and Rust, and I also have experience
-              with Node.js and TypeScript. My focus is on building robust and
-              scalable software. I'm passionate about continuously improving my
-              skills and staying up to date with the latest technologies.
+              At Transavia I build backend services in C# and .NET, and I
+              maintain the Azure resources with Bicep and CI/CD. I also build
+              GitHub agentic workflows, give AI demos, and help organise the
+              AI guild.
             </Paragraph>
             <div className="flex gap-2 md:gap-3">
               <LinkStyling

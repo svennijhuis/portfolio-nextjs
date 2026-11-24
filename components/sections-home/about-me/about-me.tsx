@@ -36,9 +36,8 @@ const AboutMe = () => {
             color="black"
             fontWeight="normal"
           >
-            Hey there! I'm Sven Nijhuis, a 25-year-old software developer based
-            in Zaandam with a passion for building innovative and efficient
-            applications.
+            I'm Sven Nijhuis, a backend developer based in Hoorn,
+            Netherlands.
           </Paragraph>
           <Paragraph
             className="mb-2 md:mb-3"
@@ -46,24 +45,22 @@ const AboutMe = () => {
             color="black"
             fontWeight="light"
           >
-            I specialize in back-end technologies and have experience with
-            various frameworks and programming languages. My professional
-            journey is currently focused on .NET, C#, and Rust. I also have
-            experience working with frameworks like Node.js, TypeScript, NestJS,
-            Express, React, and Next.js.
+            My day-to-day work is C# and .NET on Azure. I also build GitHub
+            agentic workflow templates on custom self-hosted runners, and an
+            internal plugin marketplace for AI providers, skills and agents. I
+            work with MCP servers and context engineering. In my own projects,
+            agents build in cloud environments. I design the work and review
+            what they produce. nstack is my open source set of agent skills. It
+            works in Claude Code, Codex, Cursor and GitHub Copilot.
             <br />
             <br />
-            I’m dedicated to staying at the forefront of software development.
-            In my spare time, I work on personal projects, explore new
-            technologies, and stay updated with industry trends. For me,
-            programming isn’t just a profession it's a passion.
+            I still use TypeScript, React, Next.js, Node.js, NestJS, Express
+            and PHP when a project needs them.
             <br />
             <br />
-            When I’m not coding, you can find me running or setting ambitious
-            personal challenges, like completing a marathon. As a former
-            professional cyclist, I’ve traveled extensively across Europe,
-            learning the importance of discipline, focus, and perseverance
-            qualities I now channel into my work as a developer.
+            I have run 4 marathons, and I play tennis. High-level competitive
+            cycling taught me discipline, perseverance, and clear communication
+            under pressure.
           </Paragraph>
           <LinkStyling href="/#work" icon="arrow" iconHover="eye" color="gray">
             See my work

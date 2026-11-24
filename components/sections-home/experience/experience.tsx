@@ -26,111 +26,73 @@ interface Card {
 
 const WorkExperience: Card[] = [
   {
-    title: "Software Developer",
+    title: "Backend Developer, Transavia",
     icon: "work",
-    text: "As a backend-focused software engineer, I design and implement scalable microservices and Azure Functions using .NET (C#) and Rust. My role involves developing cloud-based services, optimizing system architecture, and ensuring reliability and maintainability. Additionally, I contribute to shaping the software architecture and strategic direction of the platform.",
-    subjectArray: [
-      ".NET",
-      "C#",
-      "Rust",
-      "Microservices",
-      "Azure Functions",
-      "Terrafom",
-      "Azure",
-    ],
+    text: "June 2025 to present. I build backend services and APIs in C# and .NET on Azure for boarding pass, baggage drop-off and Flying Blue. I maintain the Azure resources with Bicep and CI/CD. I also work on GitHub agentic workflows, an internal plugin marketplace for AI agents, AI demos and the AI guild.",
+    subjectArray: ["C#", ".NET", "Azure", "Bicep", "CI/CD"],
   },
   {
-    title: "React.js & Node.js Developer",
+    title: "Backend Developer, Auto.nl",
     icon: "work",
-    text: "After completing my internship, I was given the opportunity to expand my responsibilities. With the departure of my internship supervisor, I stepped into their role, taking full ownership of the Apollo GraphQL backend and the React client-side application for Auto.nl.",
-    subjectArray: [
-      "React.js",
-      "Node.js",
-      "Apollo Client",
-      "GraphQL",
-      "Tailwind CSS",
-    ],
+    text: "From September 2024 to May 2025, at Auto.nl (Louwman Group), I built microservices and Azure workloads in .NET and Rust, with MongoDB. I mentored frontend developers.",
+    subjectArray: [".NET", "C#", "Rust", "MongoDB", "Azure"],
   },
   {
-    title: "Front-end Web Development",
+    title: "Frontend Developer, Auto.nl",
     icon: "work",
-    text: "I have been working at Day-Six since April 2021, primarily focusing on front-end development. Additionally, I have experience creating small custom plugins and themes.",
-    subjectArray: [
-      "React.js",
-      "Tailwind CSS",
-      "PHP",
-      "GSAP",
-      "Gutenburg Blocks",
-    ],
+    text: "From February 2024 to September 2024 I took over the Apollo GraphQL backend and the React client after my supervisor left, and I delivered features.",
+    subjectArray: ["React.js", "Apollo", "GraphQL"],
   },
   {
-    title: "Front-end Web Development Intership",
+    title: "Frontend internship, Auto.nl",
     icon: "work",
-    text: "During my internship, I focused on expanding my knowledge while working independently on a React client-side application connected to an Apollo GraphQL backend. I actively participated in code reviews and followed the Scrum methodology to ensure high-quality development. Over time, I was given the opportunity to work in a hybrid environment and independently develop and deploy TypeScript-based features to production.",
-    subjectArray: [
-      "React.js",
-      "Node.js",
-      "Apollo Client",
-      "GraphQL",
-      "Tailwind CSS",
-    ],
+    text: "From September 2023 to February 2024 I worked on a React client with Apollo GraphQL, took part in code reviews and Scrum, and shipped TypeScript features.",
+    subjectArray: ["React.js", "GraphQL", "TypeScript"],
   },
   {
-    title: "Front-end Web Development Intership",
+    title: "Frontend internship, Louwman ICT",
     icon: "work",
-    text: "I completed a 10-week internship at Louwman ICT Services B.V. as a Front-End Developer intern, where I contributed to the development of various web applications. My work primarily involved React and Gutenberg blocks, focusing on building and optimizing reusable components.",
-    subjectArray: [
-      "Guestburg Blocks",
-      "React.js",
-      "WordPress",
-      "Tailwind CSS",
-    ],
+    text: "From January 2022 to July 2022 I built web apps with React and Gutenberg blocks, and reusable components.",
+    subjectArray: ["React.js", "Gutenberg", "WordPress"],
   },
   {
-    title: "Cyclist",
+    title: "Full stack developer, Day Six",
     icon: "work",
-    text: "From January 2018 to October 2019, I was a member of the Volkerwessels-Merckx Cycling Team and competed in cycling races national and internationally.",
-    subjectArray: ["Challenges"],
+    text: "From April 2021 to March 2024 I built custom webshops and dashboards with Next.js, WordPress and Node.js. I sat with clients and worked the product out on paper.",
+    subjectArray: ["Next.js", "WordPress", "Node.js", "PHP"],
+  },
+  {
+    title: "Competitive cycling",
+    icon: "work",
+    text: "From January 2018 to October 2019 I raced at a high level with the Volkerwessels-Merckx Cycling Team, in the Netherlands and abroad.",
+    subjectArray: ["Cycling"],
   },
 ];
 
 const School: Card[] = [
   {
-    title: "Communication and Multimedia Design (HBO)",
+    title: "Bachelor, Communication and Multimedia Design",
     icon: "grid",
-    text: "During my studies in Communication and Multimedia Design (CMD), I explored both design and development. I worked on projects involving UI/UX design, front-end development, and back-end development, gaining experience in both areas. Over time, I developed a preference for back-end development, which led me to focus more on technical problem-solving and system architecture. As part of my studies, I completed two technical internships, further strengthening my development skills. I also learned how to write technical plans, document processes, and effectively communicate with clients and team members to ensure smooth project execution. Through my minors, I deepened my technical knowledge and expanded my expertise in both front-end and back-end development, allowing me to make informed decisions about system design and implementation.",
-    subjectArray: ["Development", "UX Design", "Research"],
+    text: "From September 2020 to June 2024 I studied Communication and Multimedia Design at the Hogeschool van Amsterdam. Front-end and back-end, with a focus on architecture. Two technical internships.",
+    subjectArray: ["HvA", "Front-end", "Back-end"],
   },
   {
     title: "Minor Blockchain Development",
     icon: "grid",
-    text: "During this minor, I developed skills in building Web3 applications on the Ethereum network, using Solidity to create smart contracts. I gained a deep understanding of blockchain structure and functionality, learning when and how this technology can be effectively applied. This provided me with a strong foundation in the capabilities and challenges of decentralized networks. As part of the program, I worked on an application using NestJS and Next.js, designed to identify vulnerabilities in smart contracts before deployment. I was responsible for the backend, developing a Node.js-based system with NestJS, MySQL, and Docker, implementing authorization and security measures to ensure reliable contract verification.",
-    subjectArray: [
-      "Blockchain",
-      "Smart Contracts",
-      "Decentralized Apps",
-      "NestJS",
-      "React.js",
-      "Solidity",
-    ],
+    text: "From February 2023 to July 2023. Solidity, NestJS, Node.js and Docker. I built the backend of an app that checks smart contracts, with NestJS, MySQL and Docker.",
+    subjectArray: ["Solidity", "NestJS", "Node.js", "Docker"],
   },
   {
-    title: "Minor information design",
+    title: "Minor Information Design",
     icon: "grid",
-    text: "During my studies at the Amsterdam University of Applied Sciences (HvA), I completed the Information Design minor, where I developed skills in data visualization and user-friendly design. A key aspect of this minor was working with web development libraries to create interactive applications. I primarily used React for building user interfaces and D3.js for developing dynamic data visualizations. This minor gave me a deeper understanding of how to combine design and technology to make complex data more accessible. It also strengthened my technical skills and taught me how to translate information into intuitive web applications.",
-    subjectArray: [
-      "D3.js",
-      "React.js",
-      "Data Visualization",
-      "UX Design",
-      "Interaction Design",
-    ],
+    text: "From September 2022 to February 2023 at the Hogeschool van Amsterdam. React and D3.js for data visualization.",
+    subjectArray: ["React.js", "D3.js"],
   },
   {
-    title: "Marketing and Communication (MBO niveau 4)",
+    title: "Marketing and Communication",
     icon: "grid",
-    text: "Johan Cruyff College is a school for elite athletes that offers a Marketing and Communication vocational education program alongside their athletic pursuits.",
-    subjectArray: ["Marketing", "Communication", "Sales"],
+    text: "From 2016 to 2019 at the Johan Cruyff College. Marketing and communication.",
+    subjectArray: ["Marketing", "Communication"],
   },
   {
     title: "Vmbo-T",
@@ -144,39 +106,44 @@ const Skills: Card[] = [
   {
     title: "C# & .NET",
     icon: "development",
-    text: "My primary focus is backend development, where I specialize in building scalable and efficient solutions using C# and .NET. These technologies form the core of my daily work.",
-    subjectArray: ["C#", ".NET", "MongoDB", "Azure Functions", "Azure"],
+    text: "C# and .NET are what I use most. At Transavia I build backend services and APIs on Azure, and I maintain those resources with Bicep and CI/CD.",
+    subjectArray: ["C#", ".NET", "Azure", "Bicep", "CI/CD"],
+  },
+  {
+    title: "AI engineering",
+    icon: "development",
+    text: "At Transavia I build GitHub agentic workflow templates on custom self-hosted runners, and an internal marketplace for AI providers, skills and agents. I work on MCP servers and context engineering, give AI demos, and help organise the AI guild. In my own projects, agents build in cloud environments and I design and review. nstack is my open source agent skills. It works in Claude Code, Codex, Cursor and GitHub Copilot.",
+    subjectArray: [
+      "Agentic workflows",
+      "MCP",
+      "nstack",
+      "Context engineering",
+      "GitHub Copilot",
+    ],
   },
   {
     title: "Rust",
     icon: "development",
-    text: "I'm currently developing in Rust in my current job, primarily focusing on building high-performance APIs using Axum and Tokio",
-    subjectArray: [
-      "Rust",
-      "Axum",
-      "Tokio",
-      "MongoDB",
-      "Azure Functions",
-      "Azure",
-    ],
+    text: "I used Rust at Auto.nl from September 2024 to May 2025, next to .NET, for microservices and APIs with MongoDB.",
+    subjectArray: ["Rust", "Axum", "Tokio", "MongoDB"],
   },
   {
-    title: "Express & Backend Integration",
+    title: "Express & NestJS",
     icon: "development",
-    text: "I enjoy using Express and NestJS to create APIs for web applications, effectively connecting the backend with the front-end and databases.",
-    subjectArray: ["Express", "NestJS", "Node.js", "GraphQL", "RESTful APIs"],
+    text: "I have used Express and NestJS to build APIs, mostly in earlier work and during my studies.",
+    subjectArray: ["Express", "NestJS", "Node.js"],
   },
   {
-    title: "React.js & Front-end Development",
+    title: "React & Next.js",
     icon: "development",
-    text: "As a skilled developer, I specialize in React.js, crafting dynamic user interfaces. I also have extensive experience with Next.js, Tailwind CSS, and Framer Motion, which I use to build responsive and visually appealing front-end applications.",
-    subjectArray: ["React.js", "Next.js", "Tailwind CSS", "Framer Motion"],
+    text: "I have built interfaces with React and Next.js, including at Auto.nl, Day Six and on this site.",
+    subjectArray: ["React.js", "Next.js", "Tailwind CSS"],
   },
   {
-    title: "PHP",
+    title: "PHP & WordPress",
     icon: "development",
-    text: "I've used PHP in various projects, including developing custom themes and plugins for WordPress. It remains a valuable tool in my development toolkit.",
-    subjectArray: ["PHP", "WordPress", "Custom Plugins", "Custom Themes"],
+    text: "I have used PHP for WordPress themes and plugins, including client work at Day Six.",
+    subjectArray: ["PHP", "WordPress"],
   },
 ];
 
@@ -213,10 +180,8 @@ const Experience = () => {
                 color="white"
                 fontWeight="light"
               >
-                With a diverse background in web development, work experience,
-                and education, I have gained valuable skills and the ability to
-                tackle challenges from various perspectives. I am always eager
-                to continue learning and growing in my field.
+                C# and .NET on Azure, AI engineering next to that, and the
+                jobs and studies behind it.
               </Paragraph>
               <div className="flex flex-wrap gap-2">
                 <ButtonStyling
