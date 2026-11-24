@@ -31,13 +31,16 @@ const LinkStyling = ({
     // get the href and remove everything before the hash (#)
     const href = e.currentTarget.href;
     if (href && href.includes("#")) {
-      e.preventDefault();
       const targetId = href.replace(/.*\#/, "");
-      // get the element by id and use scrollIntoView
+      // Only smooth-scroll when the section exists on this page; otherwise
+      // (e.g. "/#contact" from a blog page) navigate normally.
       const elem = document.getElementById(targetId);
-      elem?.scrollIntoView({
-        behavior: "smooth",
-      });
+      if (elem) {
+        e.preventDefault();
+        elem.scrollIntoView({
+          behavior: "smooth",
+        });
+      }
     }
   };
 

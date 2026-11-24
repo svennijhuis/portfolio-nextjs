@@ -7,12 +7,13 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://svennijhuis.io"),
   title: {
     default: "Sven Nijhuis",
     template: "Sven Nijhuis | %s",
   },
   description:
-    "This is my personal portfolio, created to showcase who I am and where I aspire to go.",
+    "Backend developer in Hoorn. I work with C# and .NET on Azure, and with AI engineering.",
   applicationName: "Sven Nijhuis portfolio",
   referrer: "origin-when-cross-origin",
   keywords: [
@@ -29,6 +30,7 @@ export const metadata: Metadata = {
     "svennijhuis",
     "svennijhuis.io",
     "svennijhuis",
+    "Hoorn",
     "Amsterdam",
     "Netherlands",
     "Nederland",
@@ -50,7 +52,7 @@ export const metadata: Metadata = {
     ...openGraphImage,
     title: "Sven Nijhuis",
     description:
-      "This is my personal portfolio, created to showcase who I am and where I aspire to go.",
+      "Backend developer in Hoorn. I work with C# and .NET on Azure, and with AI engineering.",
   },
   category: "technology portfolio",
 };

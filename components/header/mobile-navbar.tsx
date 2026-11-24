@@ -1,47 +1,50 @@
 "use client";
 
-import styling from "./header.module.scss";
 import ArrowIcon from "@/public/icons/arrow-icon";
 import EyeIcon from "@/public/icons/eye-icon";
 import clsx from "clsx";
 import { Squeeze as Hamburger } from "hamburger-react";
 import Link from "next/link";
-import { useState } from "react";
+import type { Dispatch, SetStateAction } from "react";
+import styling from "./header.module.scss";
 
-const MobileNavbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+interface MobileNavbarProps {
+  isOpen: boolean;
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
+}
 
+const MobileNavbar = ({ isOpen, setIsOpen }: MobileNavbarProps) => {
   const navbarData = [
     {
       name: "About me",
       url: "/#about-me",
     },
     {
-      name: "Work",
-      url: "/#work",
+      name: "Blog",
+      url: "/blog",
     },
     {
       name: "Experience",
-      url: "#experience",
+      url: "/#experience",
     },
     {
       name: "Contact",
-      url: "#contact",
+      url: "/#contact",
     },
   ];
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    // first prevent the default behavior
-    e.preventDefault();
-    // get the href and remove everything before the hash (#)
+    // Smooth-scroll only when the target section is on the current page;
+    // otherwise (e.g. /blog, or /#contact from a blog page) let Next navigate.
     const href = e.currentTarget.href;
-    const targetId = href.replace(/.*\#/, "");
-    // get the element by id and use scrollIntoView
-    const elem = document.getElementById(targetId);
-    elem?.scrollIntoView({
-      behavior: "smooth",
-    });
-    setIsOpen(!isOpen);
+    const elem = href.includes("#")
+      ? document.getElementById(href.replace(/.*\#/, ""))
+      : null;
+    if (elem) {
+      e.preventDefault();
+      elem.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsOpen(false);
   };
 
   return (
@@ -51,7 +54,7 @@ const MobileNavbar = () => {
           className={clsx(
             styling.mobile_navbar_button,
             styling.open_button,
-            "z-[10] ml-auto h-[32px] w-[32px] rounded-full bg-gray"
+            "bg-gray z-[10] ml-auto h-[32px] w-[32px] rounded-full"
           )}
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -75,19 +78,19 @@ const MobileNavbar = () => {
           <nav
             className={clsx("h-full transition-all", {
               "opacity-100 delay-300 duration-1000": isOpen,
-              "opacity-0 ": !isOpen,
+              "opacity-0": !isOpen,
             })}
           >
             <ul className="grid h-full grid-cols-1 lg:grid-cols-4">
               {navbarData.map((item, index) => (
                 <li
                   key={index}
-                  className="col-span-1 flex h-full border-t-[1px] border-t-gray py-3 first-of-type:pt-7 lg:border-r-[1px] lg:border-r-gray lg:pb-3 lg:pt-0"
+                  className="border-t-gray lg:border-r-gray col-span-1 flex h-full border-t-[1px] py-3 first-of-type:pt-7 lg:border-r-[1px] lg:pt-0 lg:pb-3"
                 >
                   <Link
                     onClick={handleScroll}
                     className={clsx(
-                      "mx-[15px] mt-auto flex h-full w-full items-end  justify-between overflow-hidden text-25 font-light uppercase text-black lg:mx-3",
+                      "text-25 mx-[15px] mt-auto flex h-full w-full items-end justify-between overflow-hidden font-light text-black uppercase lg:mx-3",
                       styling.link_hover
                     )}
                     href={item.url}
@@ -111,7 +114,7 @@ const MobileNavbar = () => {
       <div
         onClick={() => setIsOpen(!isOpen)}
         className={clsx(
-          "fixed left-0 top-0 z-[3] h-screen w-screen bg-black/60 backdrop-blur-[2px] transition-all delay-300 duration-1000 ease-in-out",
+          "fixed top-0 left-0 z-[3] h-screen w-screen bg-black/60 backdrop-blur-[2px] transition-all delay-300 duration-1000 ease-in-out",
           {
             block: isOpen,
             hidden: !isOpen,

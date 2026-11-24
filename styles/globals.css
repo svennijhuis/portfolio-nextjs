@@ -2,6 +2,7 @@
 
 /* Keep the existing JavaScript theme (custom px scales, colors, container). */
 @config "../tailwind.config.js";
+@plugin "@tailwindcss/typography";
  
 @layer base {
   :root {
@@ -77,3 +78,50 @@
     @apply bg-white text-black;
   }
 }
+/* Blog article text: typography plugin tuned to the site colors.
+   Unlayered on purpose so it wins over the plugin defaults. */
+  .blog-prose {
+    --tw-prose-body: #000;
+    --tw-prose-headings: #000;
+    --tw-prose-bold: #000;
+    --tw-prose-links: #fb7800;
+    --tw-prose-quotes: #1b1d1e;
+    --tw-prose-quote-borders: #fb7800;
+    --tw-prose-bullets: #b0b0b0;
+    --tw-prose-counters: #b0b0b0;
+    --tw-prose-hr: #e7e7e7;
+    --tw-prose-captions: #b0b0b0;
+    --tw-prose-code: #000;
+    --tw-prose-th-borders: #b0b0b0;
+    --tw-prose-td-borders: #e7e7e7;
+    font-size: 17px;
+    font-weight: 300;
+  }
+  .blog-prose :where(h2, h3, h4) {
+    font-weight: 500;
+  }
+  .blog-prose :where(a) {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  .blog-prose :where(img) {
+    border-radius: 16px;
+  }
+  .blog-prose :where(:not(pre) > code) {
+    background: #e7e7e7;
+    border-radius: 6px;
+    padding: 2px 6px;
+    font-weight: 400;
+  }
+  .blog-prose :where(:not(pre) > code)::before,
+  .blog-prose :where(:not(pre) > code)::after {
+    content: none;
+  }
+  .blog-prose :where(pre) {
+    background: #1b1d1e;
+    border-radius: 16px;
+    padding: 20px;
+  }
+  .blog-prose :where(figure[data-rehype-pretty-code-figure]) {
+    margin: 1.5em 0;
+  }
